@@ -1,0 +1,14 @@
+#designe la version de docker a utilise
+version: "3.3"
+#noeud d'entree des servcices a lance
+services:
+  #represente le nom du service
+  myfirstservice:
+    #on indique l'image de ce service
+    image: service-config
+    #permettant de faire redemarrer le continer auto s'il est stope
+    restart: always
+    #definir le nom du container et le lance
+    container_name: myservice-config
+    #on indique la commande qui sera lance au lors du run du container
+    entrypoint: ps aux
